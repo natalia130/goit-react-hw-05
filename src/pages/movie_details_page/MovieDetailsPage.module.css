@@ -1,0 +1,14 @@
+.container {
+  text-align: left;
+  padding: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.info img {
+  width: 250px;
+  height: fit-content;
+}

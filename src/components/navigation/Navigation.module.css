@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 20px;
+}
+.link {
+  color: black;
+}
+.active {
+  color: blue;
+}
+a:hover {
+  color: blue;
+}

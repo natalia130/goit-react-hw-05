@@ -1,0 +1,14 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: start;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.home h2 {
+  display: flex;
+  margin-left: 15px;
+}
