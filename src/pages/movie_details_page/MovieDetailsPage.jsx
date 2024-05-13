@@ -1,12 +1,12 @@
 import css from './MovieDetailsPage.module.css';
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { fetchMovieById } from "../../api/movies-api";
 import GoBackLink from '../../components/go_back_link/GoBackLink';
 
 const MovieDetailsPage = () => {
     const location = useLocation();
-    const backLinkHref = location.state ?? "/movies";
+    const backLinkHref = useRef(location.state ?? "/movies");
 
     const { movieId } = useParams();
 
@@ -25,7 +25,7 @@ const MovieDetailsPage = () => {
     
     return (
         <div className={css.container}>
-            <GoBackLink to={backLinkHref}/>
+            <GoBackLink to={backLinkHref.current}/>
             <div className={css.info}>
                 <img src={`https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`} alt={movieInfo.title}></img>
                 <div>
